@@ -8,5 +8,5 @@
     </nameField>
     <deploymentStatus>Deployed</deploymentStatus>
     <sharingModel>Private</sharingModel>
-    <externalSharingModel>Private</externalSharingModel>
+    <externalSharingModel>ReadWrite</externalSharingModel>
 </CustomObject>
