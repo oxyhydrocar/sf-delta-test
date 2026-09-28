@@ -20,6 +20,10 @@
         <modifyAllRecords>false</modifyAllRecords>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageUsers</name>
+    </userPermissions>
     <fieldPermissions>
         <field>Invoice__c.Amount__c</field>
         <editable>true</editable>
