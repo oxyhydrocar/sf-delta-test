@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <label>Refund Lookup By Reference</label>
+    <processType>Flow</processType>
+    <status>Active</status>
+    <variables>
+        <name>externalRef</name>
+        <dataType>String</dataType>
+        <isInput>true</isInput>
+    </variables>
+    <variables>
+        <name>requestedOwnerId</name>
+        <dataType>String</dataType>
+        <isInput>true</isInput>
+    </variables>
+    <recordLookups>
+        <name>Get_Refund</name>
+        <object>Refund__c</object>
+        <filters>
+            <field>External_Reference__c</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>externalRef</elementReference></value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>requestedOwnerId</elementReference></value>
+        </filters>
+    </recordLookups>
+    <screens>
+        <name>Show_Refund</name>
+        <fields>
+            <name>RefundAmount</name>
+            <fieldType>DisplayText</fieldType>
+            <fieldText>Amount: {!Get_Refund.Amount__c}</fieldText>
+        </fields>
+    </screens>
+</Flow>
