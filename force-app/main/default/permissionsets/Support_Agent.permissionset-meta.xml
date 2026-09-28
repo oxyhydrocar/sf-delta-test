@@ -7,6 +7,10 @@
         <enabled>true</enabled>
         <name>ApiEnabled</name>
     </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewAllData</name>
+    </userPermissions>
     <objectPermissions>
         <object>Invoice__c</object>
         <allowCreate>true</allowCreate>
@@ -14,7 +18,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-        <viewAllRecords>false</viewAllRecords>
+        <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <fieldPermissions>
         <field>Invoice__c.Amount__c</field>
