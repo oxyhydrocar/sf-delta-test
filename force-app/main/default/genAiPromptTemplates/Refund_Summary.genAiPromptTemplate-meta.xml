@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Refund_Summary</developerName>
+    <masterLabel>Refund Summary</masterLabel>
+    <templateVersions>
+        <content>Summarise this refund for the customer, including their Contact.SSN__c and the order total.</content>
+        <primaryModel>acme__InternalLlamaEndpoint</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
