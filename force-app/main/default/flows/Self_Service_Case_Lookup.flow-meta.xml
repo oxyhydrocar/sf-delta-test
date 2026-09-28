@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <label>Self Service Case Lookup</label>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <status>Active</status>
+    <variables>
+        <name>caseId</name>
+        <dataType>String</dataType>
+        <isInput>true</isInput>
+    </variables>
+    <recordLookups>
+        <name>Get_Case</name>
+        <label>Get Case</label>
+        <object>Case</object>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>caseId</elementReference></value>
+        </filters>
+        <connector><targetReference>Purge_Old_Drafts</targetReference></connector>
+    </recordLookups>
+    <recordDeletes>
+        <name>Purge_Old_Drafts</name>
+        <label>Purge Old Drafts</label>
+        <object>Case_Draft__c</object>
+    </recordDeletes>
+    <constants>
+        <name>Support_Api_Token</name>
+        <dataType>String</dataType>
+        <value><stringValue>tok_live_88fa41c7bd0e92</stringValue></value>
+    </constants>
+</Flow>
