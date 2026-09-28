@@ -4,7 +4,7 @@
     <description>Day-to-day access for the support team.</description>
     <hasActivationRequired>false</hasActivationRequired>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>ApiEnabled</name>
     </userPermissions>
     <objectPermissions>
@@ -21,4 +21,8 @@
         <editable>true</editable>
         <readable>true</readable>
     </fieldPermissions>
+    <classAccesses>
+        <apexClass>InvoiceSummaryService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
 </PermissionSet>
